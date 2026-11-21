@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background-color: #f5f3ef;
+    color: #252525;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    padding: 15px 25px;
+
+    background-color: #1c1c24;
+    color: white;
+
+    border-bottom: 4px solid #c9a45c;
+}
+
+#erste {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#erste h1 {
+    font-size: 30px;
+    color: #e6c37a;
+    margin: 0;
+}
+
+#logoBild,
+#pfoteBild {
+    width: 65px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 2px solid #c9a45c;
+}
+button {
+    padding: 11px 18px;
+
+    background-color: #c9a45c;
+    color: #1c1c24;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                transform 0.2s;
+}
+
+button:hover {
+    background-color: #e6c37a;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+main {
+    flex: 1;
+
+    width: 100%;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e0d9cc;
+    border-top: 4px solid #c9a45c;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+form h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: 27px;
+    text-align: center;
+
+    color: #28232b;
+}
+#vorschau{
+    display: flex;
+    flex-direction: row;
+}
+#divlinks {
+    width: 100px;
+}
+#divlinks img {
+    width: 100px;
+    border-radius: 8px;
+}
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #444;
+}
+
+form input {
+    display: block;
+
+    width: 100%;
+    padding: 12px 14px;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    background-color: #faf9f7;
+    color: #252525;
+
+    border: 1px solid #ccc5b8;
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: border-color 0.2s,
+                box-shadow 0.2s;
+}
+
+form input:focus {
+    border-color: #c9a45c;
+
+    box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.18);
+
+    background-color: white;
+}
+
+form input::placeholder {
+    color: #999;
+}
+form > br {
+    display: none;
+}
+#addClanButton {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin-top: 10px;
+
+    background-color: #c9a45c;
+    color: #1c1c24;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 8px;
+}
+
+#addClanButton:hover {
+    background-color: #e6c37a;
+}
+#meldung {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    padding: 12px;
+
+    text-align: center;
+    font-weight: bold;
+
+    border-radius: 8px;
+    background-color: #f9f5ec;
+}
+#meldung:empty {
+    display: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 20px 30px;
+
+    background-color: #1c1c24;
+    color: #ddd;
+
+    border-top: 3px solid #c9a45c;
+}
+
+footer p {
+    margin: 0;
+}
+
+body > hr {
+    display: none;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        justify-content: center;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    #erste h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        justify-content: center;
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+    #erste {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #erste h1 {
+        font-size: 24px;
+    }
+
+    #logoBild,
+    #pfoteBild {
+        width: 50px;
+        height: 50px;
+    }
+
+    #pfoteBild {
+        display: none;
+    }
+
+    header button {
+        flex: 1;
+        min-width: 0;
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+
+    form {
+        padding: 22px 18px;
+    }
+
+    form h2 {
+        font-size: 23px;
+    }
+
+    form input {
+        padding: 12px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+
+        padding: 20px;
+    }
+}

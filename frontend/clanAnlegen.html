@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neues Mitglied</title>
+  <link rel="stylesheet" href="styleZwei.css">
+  <script src="mainDritte.js" type="module"></script>
+</head>
+
+<body>
+  <header>
+    <div id="erste">
+      <img src="images/cat-mafia-logo.png" alt="rechtbild" id="logoBild">
+      <h1>Cat Mafia</h1>
+    </div>
+    <button id="mitglieder">Mitglieder Seite</button>
+    <button id="clanarea">Clan Area</button>
+    <img src="images/cat-mafia-paw.png" alt="linksbild" id="pfoteBild">
+  </header>
+  <main>
+    <form action="#">
+      <h2>Clan Daten</h2>
+      <div>
+        <label for="clan-name">Clan Name </label>
+        <input type="text" id="clan-name" name="clan-name" placeholder="z.B. die Katzanos" required />
+      </div><br>
+      <div>
+        <label for="fische">Fish </label>
+        <input type="number" id="fische" name="fische" placeholder="eine Zahl eintragen" required />
+      </div><br>
+      <div>
+        <label for="don">Don Name </label>
+        <input type="text" id="don" name="don" placeholder="Name des neuen Dons" required />
+      </div><br>
+      <button type="submit" id="addClanButton">Clan anlegen</button>
+      <p id="meldung"></p>
+    </form><br>
+  </main>
+  <hr>
+  <footer>
+    <p>Good Cats, Bad Businuss.</p>
+    <p>Cat Mafia © 2025</p>
+  </footer>
+</body>
+
+</html>

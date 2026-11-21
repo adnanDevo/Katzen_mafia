@@ -1,0 +1,314 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f3ef;
+    color: #252525;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 25px;
+    background-color: #1c1c24;
+    color: #fff;
+    border-bottom: 4px solid #c9a45c;
+}
+
+#erste {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#erste h1 {
+    margin: 0;
+    color: #e6c37a;
+    font-size: 30px;
+}
+
+#logoBild,
+#pfoteBild {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border: 2px solid #c9a45c;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #c9a45c;
+    color: #1c1c24;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s, transform .2s;
+}
+
+.nav-button:hover {
+    background-color: #e6c37a;
+    transform: translateY(-2px);
+}
+
+.nav-button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+main {
+    min-height: 70vh;
+}
+
+#divOben {
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#divOben h2 {
+    margin: 0 0 10px;
+    color: #28232b;
+    font-size: 30px;
+}
+
+#divOben p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 17px;
+}
+#regionen-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 25px;
+}
+.region-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+    width: 100%;
+    min-width: 0;
+    min-height: 300px;
+    padding: 28px;
+    border: 1px solid #e0d9cc;
+    border-top: 4px solid #c9a45c;
+    border-radius: 16px;
+    background-color: #fff;
+    color: #28232b;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.region-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgb(0 0 0 / 13%);
+}
+
+.region-card.kampf {
+    border-color: #d7a6a6;
+    border-top-color: #a63838;
+    background-color: #fff2f2;
+}
+
+.region-card.kampf:hover {
+    transform: none;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+}
+.region-id {
+    display: block;
+    margin-bottom: 14px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background-color: #f1e5cf;
+    color: #76551d;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.regionName,
+.region-kopf h3 {
+    margin: 0;
+    color: #28232b;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+.bereich,
+.region-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background-color: #faf8f4;
+}
+
+.bereich p,
+.region-infos p {
+    margin: 0;
+}
+
+.info-label {
+    color: #666;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.fischRate {
+    margin: 0;
+    color: #28232b;
+    font-size: 16px;
+    font-weight: 700;
+}
+.region-button {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    padding: 13px 18px;
+    border: 0;
+    border-radius: 9px;
+    background-color: #c9a45c;
+    color: #1c1c24;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .2s, transform .2s;
+}
+
+.region-button:not(:disabled):hover {
+    background-color: #e6c37a;
+    transform: translateY(-2px);
+}
+
+.region-button:not(:disabled):active {
+    transform: none;
+}
+
+.region-button:focus-visible {
+    outline: 3px solid #28232b;
+    outline-offset: 3px;
+}
+.region-card.kampf .region-button:disabled {
+    background-color: #ad5151;
+    color: #fff;
+    opacity: 1;
+    cursor: not-allowed;
+}
+.region-button:disabled {
+    opacity: .65;
+    cursor: wait;
+    transform: none;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 20px 30px;
+    border-top: 4px solid #c9a45c;
+    background-color: #1c1c24;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+@media (max-width: 1050px) {
+    #regionen-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    #regionen-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    #erste {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #erste h1 {
+        font-size: 24px;
+    }
+
+    #logoBild,
+    #pfoteBild {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #divOben h2 {
+        font-size: 24px;
+    }
+
+    #regionen-container {
+        padding: 0 15px;
+    }
+
+    .region-card {
+        min-height: 280px;
+        padding: 20px;
+    }
+
+    .regionName,
+    .region-kopf h3 {
+        font-size: 20px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
+}

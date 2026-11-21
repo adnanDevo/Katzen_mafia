@@ -1,0 +1,341 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background-color: #f5f3ef;
+    color: #252525;
+
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    padding: 15px 25px;
+
+    background-color: #1c1c24;
+    color: white;
+
+    border-bottom: 4px solid #c9a45c;
+}
+
+#erste {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#erste h1 {
+    font-size: 30px;
+    color: #e6c37a;
+    margin: 0;
+}
+
+#logoBild,
+#pfoteBild {
+    width: 65px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 2px solid #c9a45c;
+}
+button {
+    padding: 11px 18px;
+
+    background-color: #c9a45c;
+    color: #1c1c24;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                transform 0.2s;
+}
+
+button:hover {
+    background-color: #e6c37a;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+main {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 40px 20px;
+
+    background-color: #f5f3ef;
+}
+
+#clanKontainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+}
+.karte {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 22px;
+
+    background-color: white;
+
+    border: 1px solid #e0d9cc;
+    border-top: 4px solid #c9a45c;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s,
+                box-shadow 0.2s;
+}
+
+.karte:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+.karteoben {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 60px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+.karteoben p {
+    margin: 0;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    color: #28232b;
+
+    overflow-wrap: anywhere;
+}
+
+.kartemitte {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    width: 100%;
+    min-width: 0;
+
+    margin-bottom: 25px;
+}
+
+.kartelinks {
+    flex: 0 0 38%;
+
+    max-width: 145px;
+    min-width: 0;
+}
+
+.donfoto {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 2px solid #c9a45c;
+}
+
+.karteRechts {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-width: 0;
+
+    gap: 10px;
+}
+
+.karteRechts p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #4b4b4b;
+
+    overflow-wrap: anywhere;
+}
+
+.karteRechts p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+
+    color: #966c2b;
+}
+.karteunten {
+    display: block;
+
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 13px 18px;
+
+    background-color: #c9a45c;
+    color: #1c1c24;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.karteunten:hover {
+    background-color: #e6c37a;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 20px 30px;
+
+    background-color: #1c1c24;
+    color: #ddd;
+
+    border-top: 3px solid #c9a45c;
+}
+
+footer p {
+    margin: 0;
+}
+@media (max-width: 1099px) {
+
+    #clanKontainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #erste h1 {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 649px) {
+
+    header {
+        justify-content: center;
+
+        padding: 15px;
+        gap: 12px;
+    }
+
+    #erste {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #erste h1 {
+        font-size: 24px;
+    }
+
+    #logoBild,
+    #pfoteBild {
+        width: 50px;
+        height: 50px;
+    }
+
+    #pfoteBild {
+        display: none;
+    }
+
+    header button {
+        flex: 1;
+        min-width: 0;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    #clanKontainer {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .karte {
+        padding: 18px;
+    }
+
+    .karteoben p {
+        font-size: 19px;
+    }
+
+    .kartemitte {
+        gap: 15px;
+    }
+
+    .kartelinks {
+        flex-basis: 38%;
+        max-width: 135px;
+    }
+
+    .karteRechts p {
+        font-size: 14px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+}
